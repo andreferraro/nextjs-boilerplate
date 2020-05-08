@@ -13,6 +13,16 @@ export default () => (
         </Link>
       </li>
       <li>
+        <Link href='/list-ssr'>
+          <a>List SSR</a>
+        </Link>
+      </li>
+      <li>
+        <Link href='/list-csr'>
+          <a>List CSR</a>
+        </Link>
+      </li>
+      <li>
         <Link href='/nao-encontrado'>
           <a>404</a>
         </Link>

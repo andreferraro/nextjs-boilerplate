@@ -6,9 +6,13 @@ if (dotEnvResult.error) {
   throw dotEnvResult.error
 }
 
-export const env = {
-  PORT: process.env.PORT,
-  BACKEND_URL: prod ? 'https://api.example.com' : 'https://localhost:8080/graphql'
+module.exports = {
+  env: {
+    PORT: process.env.PORT,
+    BACKEND_URL: prod
+      ? 'https://api.example.com'
+      : 'https://localhost:8080/graphql'
+  }
 }
 
 /*

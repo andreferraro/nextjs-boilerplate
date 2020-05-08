@@ -5,10 +5,12 @@ Boilerplate for projects developed using Nextjs
 [x] Typescript
 [x] Styled Components
 [x] Fastify
-[ ] GraphQL + Apollo
-[ ] .vscode
-[ ] Protected routes
+[x] GraphQL + Apollo
 [x] env
-[ ] i18n
 [x] errors
 [ ] Theme Provider
+[ ] PWA
+[ ] .vscode
+[ ] Protected routes
+[ ] i18n
+[ ] Keycloak login
