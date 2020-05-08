@@ -1,9 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
 import { ButtonVerde, Title } from 'styles'
+import Layout from 'components/Layout'
 
 export default () => (
-  <div>
+  <Layout title='Targus App'>
     <Title>Typescript + Styled Components</Title>
     <ButtonVerde>Botão</ButtonVerde>
     <ul>
@@ -30,5 +31,5 @@ export default () => (
     </ul>
     <p>Port: {process.env.PORT}</p>
     <p>Backend URL: {process.env.BACKEND_URL}</p>
-  </div>
+  </Layout>
 )

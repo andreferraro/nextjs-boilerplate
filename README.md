@@ -8,9 +8,7 @@ Boilerplate for projects developed using Nextjs
 [x] GraphQL + Apollo
 [x] env
 [x] errors
-[ ] Theme Provider
-[ ] PWA
+[x] PWA
+[x] Layout App
 [ ] .vscode
-[ ] Protected routes
-[ ] i18n
-[ ] Keycloak login
+[ ] Doc Review
