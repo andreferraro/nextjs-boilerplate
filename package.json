@@ -21,8 +21,10 @@
     "@types/react-dom": "^16.9.7",
     "@types/styled-components": "^5.1.0",
     "babel-plugin-styled-components": "^1.10.7",
+    "dotenv": "^8.2.0",
     "nodemon": "^2.0.3",
     "ts-node": "^8.10.1",
     "typescript": "^3.8.3"
-  }
+  },
+  "license": "ISC"
 }

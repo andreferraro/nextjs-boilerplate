@@ -1,9 +1,7 @@
 import Next from 'next'
 const fastify = require('fastify')({ logger: { level: 'error' } })
 
-console.log(process.env.PORT)
-
-const port = parseInt(process.env.PORT || '3000', 10) || 3000
+const port = parseInt(process.env.PORT || '4200', 10)
 const dev = process.env.NODE_ENV !== 'production'
 
 fastify.register((fastify: any, _opts: any, next: any) => {

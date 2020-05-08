@@ -18,5 +18,7 @@ export default () => (
         </Link>
       </li>
     </ul>
+    <p>Port: {process.env.PORT}</p>
+    <p>Backend URL: {process.env.BACKEND_URL}</p>
   </div>
 )

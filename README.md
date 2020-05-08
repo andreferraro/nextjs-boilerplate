@@ -2,11 +2,13 @@
 
 Boilerplate for projects developed using Nextjs
 
-[ ] Typescript
-[ ] Styled Components
-[ ] Fastify
+[x] Typescript
+[x] Styled Components
+[x] Fastify
 [ ] GraphQL + Apollo
+[ ] .vscode
 [ ] Protected routes
-[ ] env
+[x] env
 [ ] i18n
-[ ] errors
+[x] errors
+[ ] Theme Provider
