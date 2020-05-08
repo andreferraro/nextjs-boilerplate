@@ -8,6 +8,8 @@
     "start": "cross-env NODE_ENV=production node dist/index.js"
   },
   "dependencies": {
+    "cross-env": "^7.0.2",
+    "fastify": "^2.14.0",
     "next": "9.3.6",
     "react": "16.13.1",
     "react-dom": "16.13.1",
