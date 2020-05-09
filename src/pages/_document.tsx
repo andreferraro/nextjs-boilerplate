@@ -2,11 +2,11 @@ import Document, {
   DocumentContext,
   Head,
   Main,
-  NextScript,
-} from "next/document"
-import { ServerStyleSheet } from "styled-components"
+  NextScript
+} from 'next/document'
+import { ServerStyleSheet } from 'styled-components'
 
-const appName: string = "Targus App"
+const appName: string = 'Targus App'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -17,7 +17,7 @@ export default class MyDocument extends Document {
       ctx.renderPage = () =>
         originalRenderPage({
           enhanceApp: (App) => (props) =>
-            sheet.collectStyles(<App {...props} />),
+            sheet.collectStyles(<App {...props} />)
         })
 
       const initialProps = await Document.getInitialProps(ctx)
@@ -28,7 +28,7 @@ export default class MyDocument extends Document {
             {initialProps.styles}
             {sheet.getStyleElement()}
           </>
-        ),
+        )
       }
     } finally {
       sheet.seal()
@@ -40,7 +40,8 @@ export default class MyDocument extends Document {
         className='no-js'
         lang='en'
         dir='ltr'
-        prefix='og: http://ogp.me/ns#'>
+        prefix='og: http://ogp.me/ns#'
+      >
         <Head>
           <meta charSet='UTF-8' key='charset' />
           <meta http-equiv='X-UA-Compatible' content='IE=edge' />

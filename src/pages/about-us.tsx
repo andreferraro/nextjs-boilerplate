@@ -6,7 +6,9 @@ export default () => {
   return (
     <Layout title='About Us'>
       <h1>About us</h1>
-      <Link href='/'><a>Voltar</a></Link>
+      <Link href='/'>
+        <a>Voltar</a>
+      </Link>
     </Layout>
   )
 }

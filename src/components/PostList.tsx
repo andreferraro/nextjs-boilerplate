@@ -18,7 +18,7 @@ export const ALL_POSTS_QUERY = gql`
 `
 export const allPostsQueryVars = {
   skip: 0,
-  first: 10
+  first: 10,
 }
 
 const PostList = () => {
@@ -29,7 +29,7 @@ const PostList = () => {
       // Setting this value to true will make the component rerender when
       // the "networkStatus" changes, so we are able to know if it is fetching
       // more data
-      notifyOnNetworkStatusChange: true
+      notifyOnNetworkStatusChange: true,
     }
   )
 
@@ -38,7 +38,7 @@ const PostList = () => {
   const loadMorePosts = () => {
     fetchMore({
       variables: {
-        skip: allPosts.length
+        skip: allPosts.length,
       },
       updateQuery: (previousResult, { fetchMoreResult }) => {
         if (!fetchMoreResult) {
@@ -75,7 +75,7 @@ const PostList = () => {
       </ul>
       {areMorePosts && (
         <button onClick={() => loadMorePosts()} disabled={loadingMorePosts}>
-          {loadingMorePosts ? "Loading..." : "Show More"}
+          {loadingMorePosts ? 'Loading...' : 'Show More'}
         </button>
       )}
     </section>

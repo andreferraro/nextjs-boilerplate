@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "jpoissonnier.vscode-styled-components",
+    "alefragnani.bookmarks",
+    "coenraads.bracket-pair-colorizer",
+    "mikestead.dotenv",
+    "eamodio.gitlens",
+    "bradymholt.pgformatter",
+    "esbenp.prettier-vscode",
+    "gruntfuggly.todo-tree",
+    "vscode-icons-team.vscode-icons",
+    "davidanson.vscode-markdownlint"
+  ],
+  "unwantedRecommendations": [
+    "chenxsan.vscode-standardjs"
+  ]
+}

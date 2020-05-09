@@ -9,7 +9,7 @@ const theme = {
 }
 
 export default class TargusApp extends App {
-  render () {
+  render() {
     const { Component, pageProps } = this.props
     return (
       <ThemeProvider theme={theme}>

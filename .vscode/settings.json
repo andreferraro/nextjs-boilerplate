@@ -1,0 +1,63 @@
+{
+  // Editor
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll": true
+    },
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 100,
+    "editor.rulers": [
+      100
+    ],
+    "editor.renderWhitespace": "all",
+    "editor.formatOnPaste": true,
+    "editor.cursorStyle": "block",
+    "editor.cursorBlinking": "smooth",
+    "editor.lineHeight": 20,
+    // Files
+    "files.autoSave": "onFocusChange",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    // Tabs
+    "workbench.editor.highlightModifiedTabs": true,
+    // Explorer
+    "explorer.sortOrder": "type",
+    // Search
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/.next": true,
+      "*.min.js": true
+    },
+    // // Typescript
+    // "typescript.format.enable": true,
+    // "typescript.preferences.quoteStyle": "single",
+    // "typescript.validate.enable": true,
+    // "typescript.autoClosingTags": true,
+    // "typescript.suggest.enabled": true,
+    // "typescript.format.semicolons": "remove",
+    // "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+    // "typescript.format.insertSpaceAfterConstructor": true,
+    // "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+    // "javascript.format.insertSpaceAfterConstructor": true,
+    // Prettier
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "none",
+    "prettier.semi": false, //Remove the semicolon at the end of the code
+    "prettier.jsxSingleQuote": true,
+    "prettier.jsxBracketSameLine": false,
+    "prettier.quoteProps": "as-needed",
+    "prettier.tabWidth": 2,
+    // "prettier.bracketSpacing": true,
+    // Colors
+    "workbench.colorCustomizations": {
+      "activityBar.background": "#246867",
+      "activityBar.foreground": "#ffffff",
+      "activityBar.inactiveForeground": "#5cc5c3",
+      "editor.lineHighlightBackground": "#023b47"
+    },
+    "terminal.integrated.shell.linux": "/bin/zsh",
+    "terminal.integrated.fontFamily": "Menlo For Powerline",
+  }

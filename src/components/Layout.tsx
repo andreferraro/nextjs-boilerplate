@@ -1,5 +1,5 @@
-import Link from "next/link"
-import Head from "next/head"
+import Link from 'next/link'
+import Head from 'next/head'
 
 type Props = {
   title?: string
@@ -7,7 +7,7 @@ type Props = {
 
 const Layout: React.FunctionComponent<Props> = ({
   children,
-  title = "This is the default title",
+  title = 'This is the default title'
 }) => (
   <div className='layout'>
     <Head>
@@ -17,11 +17,11 @@ const Layout: React.FunctionComponent<Props> = ({
       <nav>
         <Link href='/'>
           <a>Home</a>
-        </Link>{" "}
+        </Link>{' '}
         |
         <Link href='/about-us'>
           <a>About</a>
-        </Link>{" "}
+        </Link>{' '}
         |
         <Link href='/list-csr'>
           <a>List CSR</a>
@@ -31,7 +31,7 @@ const Layout: React.FunctionComponent<Props> = ({
 
     <section className='dashboard'>{children}</section>
 
-    <footer>{"I`m here to stay"}</footer>
+    <footer>{'I`m here to stay'}</footer>
   </div>
 )
 

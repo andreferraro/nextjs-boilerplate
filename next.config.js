@@ -19,7 +19,6 @@ module.exports = withPWA({
   }
 })
 
-
 /*
   If you want to include every variable in .env automatically,
   replace the above module.exports with the code below.
