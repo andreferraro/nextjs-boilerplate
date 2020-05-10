@@ -10,5 +10,6 @@ Boilerplate for projects developed using Nextjs
 [x] errors
 [x] PWA
 [x] Layout App
-[ ] .vscode
+[x] .vscode
+[ ] Lint + Husky
 [ ] Doc Review

@@ -1,30 +1,32 @@
+/* eslint-disable react/jsx-one-expression-per-line */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import Link from 'next/link'
 import { ButtonVerde, Title } from 'styles'
 import Layout from 'components/Layout'
 
 export default () => (
-  <Layout title='Targus App'>
+  <Layout title="Targus App">
     <Title>Typescript + Styled Components</Title>
     <ButtonVerde>Botão</ButtonVerde>
     <ul>
       <li>
-        <Link href='/about-us'>
+        <Link href="/about-us">
           <a>About us</a>
         </Link>
       </li>
       <li>
-        <Link href='/list-ssr'>
+        <Link href="/list-ssr">
           <a>List SSR</a>
         </Link>
       </li>
       <li>
-        <Link href='/list-csr'>
+        <Link href="/list-csr">
           <a>List CSR</a>
         </Link>
       </li>
       <li>
-        <Link href='/nao-encontrado'>
+        <Link href="/nao-encontrado">
           <a>404</a>
         </Link>
       </li>

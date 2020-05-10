@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-one-expression-per-line */
+/* eslint-disable object-curly-newline */
 import { useQuery } from '@apollo/react-hooks'
 import { NetworkStatus } from 'apollo-client'
 import gql from 'graphql-tag'
@@ -18,7 +20,7 @@ export const ALL_POSTS_QUERY = gql`
 `
 export const allPostsQueryVars = {
   skip: 0,
-  first: 10,
+  first: 10
 }
 
 const PostList = () => {
@@ -29,34 +31,34 @@ const PostList = () => {
       // Setting this value to true will make the component rerender when
       // the "networkStatus" changes, so we are able to know if it is fetching
       // more data
-      notifyOnNetworkStatusChange: true,
+      notifyOnNetworkStatusChange: true
     }
   )
+
+  const { allPosts, _allPostsMeta } = data
+  const areMorePosts = allPosts.length < _allPostsMeta.count
 
   const loadingMorePosts = networkStatus === NetworkStatus.fetchMore
 
   const loadMorePosts = () => {
     fetchMore({
       variables: {
-        skip: allPosts.length,
+        skip: allPosts.length
       },
       updateQuery: (previousResult, { fetchMoreResult }) => {
         if (!fetchMoreResult) {
           return previousResult
         }
-        return Object.assign({}, previousResult, {
-          // Append the new posts results to the old one
-          //allPosts: [...previousResult.allPosts, ...fetchMoreResult.allPosts],
-        })
-      },
+        return {
+          ...previousResult // Append the new posts results to the old one
+          // allPosts: [...previousResult.allPosts, ...fetchMoreResult.allPosts]
+        }
+      }
     })
   }
 
   if (error) return <strong>Error loading posts.</strong>
   if (loading && !loadingMorePosts) return <div>Loading</div>
-
-  const { allPosts, _allPostsMeta } = data
-  const areMorePosts = allPosts.length < _allPostsMeta.count
 
   return (
     <section>
@@ -67,14 +69,20 @@ const PostList = () => {
               <span>{index + 1}. </span>
               <a href={post.url}>{post.title}</a>
               <div>
-                id={post.id} votes={post.votes}
+                id=
+                {post.id} votes=
+                {post.votes}
               </div>
             </div>
           </li>
         ))}
       </ul>
       {areMorePosts && (
-        <button onClick={() => loadMorePosts()} disabled={loadingMorePosts}>
+        <button
+          type="button"
+          onClick={() => loadMorePosts()}
+          disabled={loadingMorePosts}
+        >
           {loadingMorePosts ? 'Loading...' : 'Show More'}
         </button>
       )}

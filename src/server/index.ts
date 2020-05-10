@@ -1,4 +1,6 @@
+/* eslint-disable no-shadow */
 import Next from 'next'
+
 const fastify = require('fastify')({ logger: { level: 'error' } })
 
 const port = parseInt(process.env.PORT || '4200', 10)
@@ -45,10 +47,11 @@ fastify.register((fastify: any, _opts: any, next: any) => {
 
       next()
     })
-    .catch(err => next(err))
+    .catch((err) => next(err))
 })
 
 fastify.listen(port, (err: any) => {
   if (err) throw err
+  // eslint-disable-next-line no-console
   console.log(`> Ready on http://localhost:${port}`)
 })

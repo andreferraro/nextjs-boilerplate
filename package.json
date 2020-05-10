@@ -1,11 +1,28 @@
 {
   "name": "targus-app",
+  "author": {
+    "email": "ferraro@targus.tech",
+    "name": "Andre Ferraro"
+  },
   "version": "1.0.0",
+  "description": "A boilerplate for NextJs applications",
+  "keywords": [
+    "boilerplate",
+    "typescript",
+    "styled components",
+    "graphql",
+    "apollo",
+    "pwa",
+    "dotenv",
+    "env",
+    "fastify"
+  ],
   "private": true,
   "scripts": {
     "dev": "nodemon",
     "build": "next build && tsc --project tsconfig.server.json",
-    "start": "cross-env NODE_ENV=production node dist/index.js"
+    "start": "cross-env NODE_ENV=production node dist/index.js",
+    "lint": "eslint src/**/*.ts"
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.5",
@@ -31,12 +48,33 @@
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.7",
     "@types/styled-components": "^5.1.0",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
     "babel-plugin-graphql-tag": "^2.5.0",
     "babel-plugin-styled-components": "^1.10.7",
     "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "husky": "^4.2.5",
     "nodemon": "^2.0.3",
+    "prettier": "^2.0.5",
+    "prettier-standard": "^16.3.0",
     "ts-node": "^8.10.1",
     "typescript": "^3.8.3"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+    "node": "^12",
+    "npm": "^6.13.0",
+    "yarn": "^1.22.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
+  }
 }
