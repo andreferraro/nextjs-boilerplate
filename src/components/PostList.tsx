@@ -35,14 +35,12 @@ const PostList = () => {
     }
   )
 
-  const { allPosts, _allPostsMeta } = data
-  const areMorePosts = allPosts.length < _allPostsMeta.count
-
   const loadingMorePosts = networkStatus === NetworkStatus.fetchMore
 
   const loadMorePosts = () => {
     fetchMore({
       variables: {
+        // eslint-disable-next-line no-use-before-define
         skip: allPosts.length
       },
       updateQuery: (previousResult, { fetchMoreResult }) => {
@@ -50,7 +48,7 @@ const PostList = () => {
           return previousResult
         }
         return {
-          ...previousResult // Append the new posts results to the old one
+          // ...previousResult // Append the new posts results to the old one
           // allPosts: [...previousResult.allPosts, ...fetchMoreResult.allPosts]
         }
       }
@@ -59,6 +57,9 @@ const PostList = () => {
 
   if (error) return <strong>Error loading posts.</strong>
   if (loading && !loadingMorePosts) return <div>Loading</div>
+
+  const { allPosts, _allPostsMeta }: any = data
+  const areMorePosts = allPosts.length < _allPostsMeta.count
 
   return (
     <section>
