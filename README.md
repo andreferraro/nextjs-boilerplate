@@ -1,4 +1,4 @@
-# Targus App
+# Nextjs Boilerplate
 
 Boilerplate for projects developed using Nextjs
 
@@ -11,5 +11,8 @@ Boilerplate for projects developed using Nextjs
 [x] PWA
 [x] Layout App
 [x] .vscode
-[ ] Lint + Husky
+[x] Lint + Husky
+[ ] i18n
+[ ] Themed
+[ ] Protected routes
 [ ] Doc Review
