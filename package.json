@@ -30,7 +30,7 @@
     "apollo-cache-inmemory": "^1.6.5",
     "apollo-client": "^2.6.8",
     "apollo-link-http": "^1.5.17",
-    "apollo-server-core": "^2.13.0",
+    "apollo-server-core": "^2.14.2",
     "cross-env": "^7.0.2",
     "fastify": "^2.14.0",
     "graphql": "^15.0.0",
