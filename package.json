@@ -37,7 +37,7 @@
     "graphql-tag": "^2.10.3",
     "next": "9.3.6",
     "next-pwa": "^2.4.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "styled-components": "^5.1.0"
