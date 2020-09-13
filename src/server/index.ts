@@ -1,5 +1,6 @@
 /* eslint-disable no-shadow */
 import Next from 'next'
+import { IncomingMessage, ServerResponse } from 'http'
 
 const fastify = require('fastify')({ logger: { level: 'error' } })
 
@@ -16,8 +17,8 @@ fastify.register((fastify: any, _opts: any, next: any) => {
         fastify.get(
           '/_next/*',
           async (
-            req: { req: import('http').IncomingMessage },
-            reply: { res: import('http').ServerResponse; sent: boolean }
+            req: { req: IncomingMessage },
+            reply: { res: ServerResponse; sent: boolean }
           ) => {
             await handle(req.req, reply.res)
             reply.sent = true
@@ -27,8 +28,8 @@ fastify.register((fastify: any, _opts: any, next: any) => {
       fastify.all(
         '/*',
         async (
-          req: { req: import('http').IncomingMessage },
-          reply: { res: import('http').ServerResponse; sent: boolean }
+          req: { req: IncomingMessage },
+          reply: { res: ServerResponse; sent: boolean }
         ) => {
           await handle(req.req, reply.res)
           reply.sent = true
@@ -37,8 +38,8 @@ fastify.register((fastify: any, _opts: any, next: any) => {
 
       fastify.setNotFoundHandler(
         async (
-          request: { req: import('http').IncomingMessage },
-          reply: { res: import('http').ServerResponse; sent: boolean }
+          request: { req: IncomingMessage },
+          reply: { res: ServerResponse; sent: boolean }
         ) => {
           await app.render404(request.req, reply.res)
           reply.sent = true
