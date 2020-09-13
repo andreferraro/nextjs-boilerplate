@@ -17,10 +17,10 @@ fastify.register((fastify: any, _opts: any, next: any) => {
         fastify.get(
           '/_next/*',
           async (
-            req: { req: IncomingMessage },
-            reply: { res: ServerResponse; sent: boolean }
+            req: { raw: IncomingMessage },
+            reply: { raw: ServerResponse; sent: boolean }
           ) => {
-            await handle(req.req, reply.res)
+            await handle(req.raw, reply.raw)
             reply.sent = true
           }
         )
@@ -28,20 +28,20 @@ fastify.register((fastify: any, _opts: any, next: any) => {
       fastify.all(
         '/*',
         async (
-          req: { req: IncomingMessage },
-          reply: { res: ServerResponse; sent: boolean }
+          req: { raw: IncomingMessage },
+          reply: { raw: ServerResponse; sent: boolean }
         ) => {
-          await handle(req.req, reply.res)
+          await handle(req.raw, reply.raw)
           reply.sent = true
         }
       )
 
       fastify.setNotFoundHandler(
         async (
-          request: { req: IncomingMessage },
-          reply: { res: ServerResponse; sent: boolean }
+          request: { raw: IncomingMessage },
+          reply: { raw: ServerResponse; sent: boolean }
         ) => {
-          await app.render404(request.req, reply.res)
+          await app.render404(request.raw, reply.raw)
           reply.sent = true
         }
       )

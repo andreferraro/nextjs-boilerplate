@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { ButtonVerde, Title } from 'styles'
 import Layout from 'components/Layout'
 
-export default () => (
+const Main = () => (
   <Layout title="Targus App">
     <Title>Typescript + Styled Components</Title>
     <ButtonVerde>Botão</ButtonVerde>
@@ -35,3 +35,4 @@ export default () => (
     <p>Backend URL: {process.env.BACKEND_URL}</p>
   </Layout>
 )
+export default Main

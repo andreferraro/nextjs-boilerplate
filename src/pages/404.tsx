@@ -1,4 +1,6 @@
 import React from 'react'
 import Layout from 'components/Layout'
 
-export default () => <Layout title="Error 404">404 Error</Layout>
+const Page404 = () => <Layout title="Error 404">404 Error</Layout>
+
+export default Page404

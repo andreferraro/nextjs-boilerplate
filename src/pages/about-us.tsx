@@ -3,7 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import Layout from 'components/Layout'
 
-export default () => (
+const AboutUs = () => (
   <Layout title="About Us">
     <h1>About us</h1>
     <Link href="/">
@@ -11,3 +11,5 @@ export default () => (
     </Link>
   </Layout>
 )
+
+export default AboutUs

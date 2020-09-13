@@ -25,10 +25,10 @@
     "lint": "eslint src/**/*.ts"
   },
   "dependencies": {
+    "@apollo/client": "^3.1.5",
     "@apollo/react-hooks": "^4.0.0",
     "@apollo/react-ssr": "^4.0.0",
     "apollo-cache-inmemory": "^1.6.6",
-    "apollo-client": "^2.6.10",
     "apollo-link-http": "^1.5.17",
     "apollo-server-core": "^2.17.0",
     "cross-env": "^7.0.2",
@@ -71,7 +71,7 @@
   "engines": {
     "node": "^12",
     "npm": "^6.13.0",
-    "yarn": "1.17.3"
+    "yarn": "^1.22.5"
   },
   "husky": {
     "hooks": {

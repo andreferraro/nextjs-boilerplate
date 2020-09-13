@@ -7,8 +7,8 @@ import { IncomingMessage, ServerResponse } from 'http'
 import { NextPage, NextPageContext } from 'next'
 import { ContextFunction } from 'apollo-server-core'
 import { ApolloProvider } from '@apollo/react-hooks'
-import { ApolloClient } from 'apollo-client'
-import { InMemoryCache, NormalizedCacheObject } from 'apollo-cache-inmemory'
+import { ApolloClient, InMemoryCache } from '@apollo/client'
+import { NormalizedCacheObject } from 'apollo-cache-inmemory'
 
 const { HttpLink } = require('apollo-link-http')
 
